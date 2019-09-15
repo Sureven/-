@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断手机类型</title>
+    <base target="_blank">
+</head>
+<body>
+<script>
+    const userAgent =navigator.userAgent.toLowerCase()
+    var BrowserInfo = {
+        isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
+        isIphone: Boolean(navigator.userAgent.match(/iphone|ipod/ig)),
+        isIpad: Boolean(navigator.userAgent.match(/ipad/ig)),
+        isWeixin: Boolean(navigator.userAgent.match(/MicroMessenger/ig)),
+        isPc:Boolean(navigator.userAgent.match(/window/ig)),
+    };
+    console.log(userAgent);
+    for(var a in BrowserInfo){
+        console.log(a)
+        if (BrowserInfo[a]) {
+            document.write("机器的型号"+a)
+        }
+
+    }
+</script>
+<p>
+    有js代码可以直接引入:mobile-detect.js
+</p>
+<p>
+    github地址: <a href="https://github.com/hgoebl/mobile-detect.js/">https://github.com/hgoebl/mobile-detect.js/</a>
+</p>
+<p>
+    文档地址: <a href="http://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html">http://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html</a>
+</p>
+<p>
+    参考博客: <a href="https://blog.csdn.net/szs860806/article/details/70316556">https://blog.csdn.net/szs860806/article/details/70316556</a>
+</p>
+</body>
+</html>
